@@ -1,0 +1,4 @@
+even values from array
+2 4 6 
+odd values from array
+1 3 5 7 
