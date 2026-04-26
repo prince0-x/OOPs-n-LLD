@@ -1,0 +1,96 @@
+Single Responsibility Principle (SRP)
+
+A class should have one reason to change.
+
+Not “one function.”
+Not “one method.”
+One reason to change.
+
+What It Actually Means
+
+If a class changes because:
+
+Business logic changes
+
+Database schema changes
+
+Logging format changes
+
+API contract changes
+
+Then that class has multiple responsibilities.
+
+That is structural instability.
+
+Why It Is Required
+1️⃣ Reduces Change Impact
+
+If one class handles:
+
+Strategy logic
+
+Risk checks
+
+Order execution
+
+Logging
+
+Any change in any of these → modify same file.
+
+In trading systems:
+
+1 file modified often = bug hotspot.
+
+Bug hotspots statistically correlate with failure clusters.
+
+Empirical observation in large systems:
+
+20% of files cause 80% of production bugs.
+
+SRP prevents that clustering.
+
+2️⃣ Improves Testability
+
+If a class:
+
+Fetches data
+
+Processes signal
+
+Sends order
+
+You cannot unit test signal logic independently.
+
+With SRP:
+
+You test signal logic alone.
+
+You mock execution.
+
+Deterministic testing.
+
+3️⃣ Reduces Cognitive Load
+
+If class does 5 things:
+
+Developer must load 5 domains into working memory.
+
+Human working memory ≈ 4–7 elements.
+
+SRP respects cognitive limits.
+
+4️⃣ Enables Parallel Development
+
+In HFT team:
+
+Quant modifies signal
+
+Infra modifies execution
+
+Risk team modifies limits
+
+If all logic in one class:
+
+Merge conflicts
+
+Cross-team coupling

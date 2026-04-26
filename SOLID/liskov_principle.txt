@@ -1,0 +1,22 @@
+Liskov Substitution Principle (LSP)
+
+Definition:
+Objects of a derived class must be usable wherever the base class is expected, without breaking correctness.
+
+In HFT context:
+
+Suppose IStrategy defines:
+
+onMarketData()
+
+returns valid order signals.
+
+If a derived strategy:
+
+throws exceptions unexpectedly,
+
+violates risk constraints,
+
+blocks execution thread,
+
+returns invalid order sizes,

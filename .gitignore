@@ -1,0 +1,6 @@
+# Ignore .cph folders anywhere in the repo (main dir + all subdirs)
+.cph/
+
+# Ignore all .exe and .out files anywhere
+*.exe
+*.out
